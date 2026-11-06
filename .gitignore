@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+pruefung/
+.DS_Store
+*.log
+werkzeuge/rundgang/aus/
+__pycache__/

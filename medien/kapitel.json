@@ -1,0 +1,78 @@
+{
+ "dauer_s": 77.7,
+ "frames": 280,
+ "kapitel": [
+  [
+   0,
+   "Titel: Ortsmelder. Etwas ist kaputt? Melden, bearbeiten, beantworten, in einem offenen System."
+  ],
+  [
+   4.5,
+   "Eine Laterne flackert. Melden geht ohne Anmeldung, in drei kurzen Schritten."
+  ],
+  [
+   8.8,
+   "Erst die Kategorie."
+  ],
+  [
+   11.2,
+   "Dann der Ort: ein Klick auf die Karte oder ein Griff in die Liste."
+  ],
+  [
+   14.1,
+   "Die Umkreissuche in MongoDB zeigt sofort, was hier schon bekannt ist."
+  ],
+  [
+   21.4,
+   "Ein, zwei Sätze genügen. Namen braucht es nicht."
+  ],
+  [
+   24.3,
+   "Fertig. Mit diesem Code sieht die meldende Person jederzeit den Stand."
+  ],
+  [
+   28.3,
+   "Die Verwaltung meldet sich mit ihrem Schlüssel an, hier dem der Demo."
+  ],
+  [
+   32.1,
+   "Alles auf einen Blick: Stand, Liste und Karte. Die Zahlen kommen aus einer MongoDB-Aggregation."
+  ],
+  [
+   37.6,
+   "Die neue Meldung ist da, ihr Pin auf der Karte hervorgehoben."
+  ],
+  [
+   42.3,
+   "Stand setzen, antworten. Ein Textbaustein spart das Tippen."
+  ],
+  [
+   46.1,
+   "Darunter steht, was im Umkreis noch offen ist. So fällt eine Häufung gleich auf."
+  ],
+  [
+   50.0,
+   "Gespeichert. Wenn zwei gleichzeitig ändern, kommt nur eine Änderung durch, die andere Person erfährt es."
+  ],
+  [
+   55.0,
+   "Wo es sich häuft und was je Kategorie offen ist. Ein Klick filtert die Liste."
+  ],
+  [
+   59.2,
+   "Und bei der meldenden Person kommt an: In Arbeit, mit der Antwort der Stadt."
+  ],
+  [
+   63.6,
+   "Auch auf dem Telefon: Dieselbe Seite passt sich an, mit der Tastatur ist sie ebenso bedienbar."
+  ],
+  [
+   67.2,
+   "Gemessen am 06.11.2026: 195 Tests bestanden, davon 74 gegen echtes MongoDB 7 und 32 im echten Browser; 0 axe-Verstöße in 18 Prüfungen."
+  ],
+  [
+   73.2,
+   "Selbst ausprobieren: docker compose up --build. Die Stadt und alle Meldungen sind erfunden."
+  ]
+ ]
+}

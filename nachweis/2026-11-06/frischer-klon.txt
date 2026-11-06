@@ -1,0 +1,14 @@
+Datum: 06.11.2026 17:14 CET
+Commit: b02c519
+Rechner: Darwin arm64, Docker 29.2.1
+Dateien im Klon außerhalb von Git: 0
+Basis-Images lokal vorhanden: node:22-alpine, mongo:7 (nicht mitgemessen)
+Bauen ohne Cache: 6 s
+Start bis gesund: 10 s
+Gesamt: 16 s
+GET /api/gesund: {"status":"ok"}
+GET /: HTTP 200
+Anmeldung mit dem Demo-Schlüssel: HTTP 204
+Meldungen in der Liste: 26
+Container: mongo=Up 9 seconds (healthy) ortsmelder=Up 5 seconds (healthy) 
+MongoDB-Version: db version v7.0.45

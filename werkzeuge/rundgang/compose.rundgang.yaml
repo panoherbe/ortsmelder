@@ -1,0 +1,22 @@
+# Added on top of compose.pruefen.yaml by aufnehmen.sh: the app with made-up data, and the recorder.
+services:
+  aufnahme:
+    build:
+      context: werkzeuge/rundgang
+      dockerfile: Dockerfile.aufnahme
+    # Same network namespace as the app, so pictures and video show localhost.
+    network_mode: 'service:ortsmelder'
+    depends_on:
+      ortsmelder:
+        condition: service_healthy
+    environment:
+      HOME: /tmp
+      APP_URL: http://localhost:8080
+      FAKTEN: /nachweis/ergebnis.json
+      AUS: /aus
+    working_dir: /rundgang
+    volumes:
+      - ./werkzeuge/rundgang:/rundgang:ro
+      - ./werkzeuge/rundgang/aus:/aus
+      - ${NACHWEIS:-./pruefung}:/nachweis:ro
+    command: ['python3', 'ortsmelder.py']

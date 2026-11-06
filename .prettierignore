@@ -1,0 +1,8 @@
+LICENSE
+package-lock.json
+dist/
+medien/
+nachweis/
+pruefung/
+werkzeuge/rundgang/
+api/stadt/musterstadt.json

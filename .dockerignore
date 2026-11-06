@@ -1,0 +1,9 @@
+**/node_modules
+**/dist
+.git
+.env
+pruefung
+medien
+nachweis
+werkzeuge/rundgang/aus
+**/.DS_Store

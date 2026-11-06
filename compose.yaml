@@ -1,0 +1,35 @@
+# Starts everything with one command: docker compose up --build
+# Demo mode with made-up data, reachable on this computer only. Going live: docs/BETRIEB.md
+name: ortsmelder
+
+services:
+  mongo:
+    image: mongo:7
+    restart: on-failure
+    volumes:
+      - mongo-daten:/data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--quiet', '--eval', "db.adminCommand('ping').ok"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+
+  ortsmelder:
+    build:
+      context: .
+      target: betrieb
+    restart: on-failure
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      OM_MONGO_URL: mongodb://mongo:27017/ortsmelder
+      OM_DEMO: ${OM_DEMO:-1}
+      OM_VERWALTUNG_SCHLUESSEL: ${OM_VERWALTUNG_SCHLUESSEL:-}
+      OM_COOKIE_SECURE: ${OM_COOKIE_SECURE:-}
+      OM_PROXY_STUFEN: ${OM_PROXY_STUFEN:-0}
+    ports:
+      - '${OM_ADRESSE:-127.0.0.1}:${OM_PORT:-8080}:8080'
+
+volumes:
+  mongo-daten:

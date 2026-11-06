@@ -1,0 +1,150 @@
+{
+  "datum": "2026-11-06T16:13:58.271Z",
+  "datum_de": "06.11.2026",
+  "laufzeit_s": 60,
+  "commit": "b02c519",
+  "node": "v22.23.4",
+  "plattform": "linux/arm64",
+  "gruppen": {
+    "oberflaeche": {
+      "bestanden": 67,
+      "fehlgeschlagen": 0,
+      "uebersprungen": 0
+    },
+    "api_einheiten": {
+      "bestanden": 22,
+      "fehlgeschlagen": 0,
+      "uebersprungen": 0
+    },
+    "api_echtes_mongodb": {
+      "bestanden": 74,
+      "fehlgeschlagen": 0,
+      "uebersprungen": 0
+    },
+    "browser": {
+      "bestanden": 32,
+      "fehlgeschlagen": 0,
+      "uebersprungen": 0
+    }
+  },
+  "gesamt": {
+    "bestanden": 195,
+    "fehlgeschlagen": 0,
+    "uebersprungen": 0
+  },
+  "axe": {
+    "pruefungen": 18,
+    "verstoesse": 0,
+    "regeln": "wcag2a, wcag2aa, wcag21a, wcag21aa, wcag22aa",
+    "ansichten": [
+      {
+        "ansicht": "melden-leer",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 26
+      },
+      {
+        "ansicht": "melden-fehler",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 26
+      },
+      {
+        "ansicht": "melden-nahe",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 28
+      },
+      {
+        "ansicht": "danke",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 20
+      },
+      {
+        "ansicht": "stand",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 20
+      },
+      {
+        "ansicht": "anmelden-fehler",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 24
+      },
+      {
+        "ansicht": "verwaltung",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 29
+      },
+      {
+        "ansicht": "verwaltung-detail",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 31
+      },
+      {
+        "ansicht": "nicht-gefunden",
+        "breite": 1280,
+        "verstoesse": [],
+        "bestanden": 15
+      },
+      {
+        "ansicht": "melden-leer",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 26
+      },
+      {
+        "ansicht": "melden-fehler",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 26
+      },
+      {
+        "ansicht": "melden-nahe",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 28
+      },
+      {
+        "ansicht": "danke",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 20
+      },
+      {
+        "ansicht": "stand",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 20
+      },
+      {
+        "ansicht": "anmelden-fehler",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 24
+      },
+      {
+        "ansicht": "verwaltung",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 28
+      },
+      {
+        "ansicht": "verwaltung-detail",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 30
+      },
+      {
+        "ansicht": "nicht-gefunden",
+        "breite": 390,
+        "verstoesse": [],
+        "bestanden": 15
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+# Everything ./pruefen.sh runs. Own project, own MongoDB in memory, removed afterwards.
+services:
+  mongo:
+    image: mongo:7
+    tmpfs:
+      - /data/db
+    healthcheck:
+      test: ['CMD', 'mongosh', '--quiet', '--eval', "db.adminCommand('ping').ok"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  code:
+    build:
+      context: .
+      target: pruefen
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      OM_TEST_MONGO: mongodb://mongo:27017
+    volumes:
+      - ./pruefung:/w/pruefung
+
+  ortsmelder:
+    build:
+      context: .
+      target: betrieb
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      OM_MONGO_URL: mongodb://mongo:27017/e2e
+      OM_DEMO: '1'
+      OM_GRENZE_MELDEN: '1000'
+      OM_GRENZE_ANMELDEN: '1000'
+      OM_GRENZE_LESEN: '100000'
+
+  e2e:
+    build:
+      context: .
+      dockerfile: e2e/Dockerfile
+    depends_on:
+      ortsmelder:
+        condition: service_healthy
+    environment:
+      OM_URL: http://ortsmelder:8080
+      OM_PRUEFUNG: /w/pruefung
+    volumes:
+      - ./pruefung:/w/pruefung

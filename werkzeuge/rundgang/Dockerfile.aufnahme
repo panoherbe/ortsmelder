@@ -1,0 +1,4 @@
+# Recorder: the browsers of the e2e image, driven from Python.
+FROM mcr.microsoft.com/playwright:v1.56.0-noble
+RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-pip \
+  && pip3 install --no-cache-dir --break-system-packages playwright==1.56.0
